@@ -8,14 +8,14 @@
 function next(){
 
       if ($("img.active").hasClass("last")) {
-        $("img.first").removeClass("hide").addClass("active");
-        $("img.last").removeClass("active").addClass("hide");
+        $("img.first").addClass("active");
+        $("img.last").removeClass("active");
         $("i.first").addClass("ontarget");
         $("i.last").removeClass("ontarget");
       }
       else {
-        $("img.active").next().removeClass("hide").addClass("active");
-        $("img.active").prev().removeClass("active").addClass("hide");
+        $("img.active").next().addClass("active");
+        $("img.active").prev().removeClass("active");
         $("i.ontarget").next().addClass("ontarget");
         $("i.ontarget").prev().removeClass("ontarget");
 
@@ -25,14 +25,14 @@ function next(){
 function prev(){
 
         if ($("img.active").hasClass("first")) {
-          $("img.last").removeClass("hide").addClass("active");
-          $("img.first").removeClass("active").addClass("hide");
+          $("img.last").addClass("active");
+          $("img.first").removeClass("active");
           $("i.last").addClass("ontarget");
           $("i.first").removeClass("ontarget");
         }
         else {
-          $("img.active").prev().removeClass("hide").addClass("active");
-          $("img.active").next().removeClass("active").addClass("hide");
+          $("img.active").prev().addClass("active");
+          $("img.active").next().removeClass("active");
           $("i.ontarget").prev().addClass("ontarget");
           $("i.ontarget").next().removeClass("ontarget");
         }
