@@ -50,42 +50,14 @@ $(document).keydown(function() {
   }
 })
 
-$(".pointer i.img1").click(
-  function(){
-    $("img.active").removeClass("active").addClass("hide");
-    $("img.im1").removeClass("hide").addClass("active");
-    $("i.ontarget").removeClass("ontarget");
-    $("i.img1").addClass("ontarget");
+$('.pointer > i').click(function () {
+  $('.pointer > i').removeClass("ontarget");
+  $(this).addClass("ontarget");
+  var thisIndex = $(this).index();
+  $("img.active").removeClass("active")
+  $("img").eq(thisIndex).addClass("active");
 
-  })
-
-$(".pointer i.img2").click(
-  function(){
-    $("img.active").removeClass("active").addClass("hide");
-    $("img.im2").removeClass("hide").addClass("active");
-    $("i.ontarget").removeClass("ontarget");
-    $("i.img2").addClass("ontarget");
-  }
-
-)
-$(".pointer i.img3").click(
-  function() {
-    $("img.active").removeClass("active").addClass("hide");
-    $("img.im3").removeClass("hide").addClass("active");
-    $("i.ontarget").removeClass("ontarget");
-    $("i.img3").addClass("ontarget");
-  }
-
-)
-$(".pointer i.img4").click(
-  function(){
-    $("img.active").removeClass("active").addClass("hide");
-    $("img.im4").removeClass("hide").addClass("active");
-    $("i.ontarget").removeClass("ontarget");
-    $("i.img4").addClass("ontarget");
-  }
-
-)
+})
 
   $("div.arrow_right i").click(next)
   $("div.arrow_left i").click(prev)

@@ -18,10 +18,9 @@
   height: 200x;
 }
 
-/* .carousel{
+.carousel img{
   display: none;
-} */
-
+}
 
 .cont{
   display: flex;
@@ -54,11 +53,7 @@ i{
   display: none;
 }
 
-/* .show{
-  display: block;
-} */
-
-.active{
+.carousel img.active{
   display: block;
 }
 
